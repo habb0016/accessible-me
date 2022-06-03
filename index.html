@@ -45,24 +45,28 @@
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
       </section>
       <!-- owner information -->
-      <section role="region" aria-labelledby="the-owner" class="owner" id="owner">
+      <section role="complementary" aria-labelledby="the-owner" class="owner" id="owner">
         <h2 role="heading" aria-level="2" id="the-owner">Meet the owner</h2>
-        <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+        <ul itemscope itemtype="https://schema.org/Person">
+          <li itemprop="name">Name: John Doe</li>
+          <li itemprop="jobTitle">Title: CEO</li>
+          <li itemprop="email">Email: johnjoe@jambox.ca</li>
+          <li itemprop="telephone">Phone: 613-000-0000</li>
         </ul>
       </section>
-      <!-- location information -->
-      <section role="complementary" class="address" id="address">
-        <h2 role="heading" aria-level="2">Address</h2>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
-        </p>
+      <!-- aria and schema for location  -->
+      <section itemscope itemtype="https://schema.org/Place" role="complementary" aria-labelledby="the-address" class="address" id="address">
+        <h2 role="heading" aria-level="2" id="the-address">Address</h2>
+        <ul>
+          <!-- formated address for schema -->
+          <li itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="name">Jambox Studios</span>
+            <span itemprop="streetAddress">123 Guitar Road,</span>
+            <span itemprop="addressLocality">Musicville,</span> 
+            <span itemprop="addressCountry">Danceistan</span>
+            <span itemprop="postalCode">B3T 0L0</span>
+          </li>
+        </ul>
       </section>
       <!-- contact section -->
       <section class="contact" id="contact">

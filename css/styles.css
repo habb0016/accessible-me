@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: rgb(163, 163, 163);
   margin: 0;
   padding: 0;
 }
@@ -32,14 +32,31 @@ img {
 .skip-links a{
   position: absolute;
   top: -3em;
-  background-color: black;
-  color:white;
+  background-color: white;
+  color:black;
   padding: .5em 1em;
   font-weight: bold;
 }
 /* display skip link when user is focused on link */
 .skip-links a:focus{
   top: 0;
+}
+
+/* link  */
+a:link {
+  text-decoration: underline;
+  color:navy;
+}
+/* visited link */
+a:visited {
+  color: black;
+  text-decoration: dotted;
+}
+
+/* hover active */
+a:hover, a:active{
+  color: white;
+  text-decoration: none;
 }
 
 nav ul {
@@ -86,4 +103,7 @@ form button {
 
 footer {
   padding: 2rem 0;
+  /* place the back to top link somewhere more convinient */
+  display: flex;
+  justify-content: space-between;
 }

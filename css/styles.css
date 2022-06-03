@@ -58,6 +58,10 @@ a:hover, a:active{
   color: white;
   text-decoration: none;
 }
+/* remove bullets from li in section */
+section ul li {
+  list-style-type: none;
+}
 
 nav ul {
   list-style: none;
